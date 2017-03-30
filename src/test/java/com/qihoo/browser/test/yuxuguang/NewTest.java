@@ -209,6 +209,57 @@ public class NewTest {
 		// driver.launchApp();
 		// Thread.sleep(3000);
 	}
+	
+	@Test(invocationCount = 2, threadPoolSize = 1)
+	public void case5() throws InterruptedException {
+		driver.findElement(
+				By.xpath("//android.widget.TextView[contains(@text,'jpg')]"))
+				.click();
+		Thread.sleep(5000);
+		// 长按图片
+		driver.tap(1, 400*execWidth/caseWidth, 500*execHeight/caseHeight, 2500);
+		driver.findElement(
+				By.xpath("//android.widget.TextView[contains(@text,'保存图片')]"))
+				.click();
+		Thread.sleep(3000);
+		//点击home键
+		driver.findElement(By.id("com.qihoo.browser:id/a1b")).click();
+		Thread.sleep(3000);
+		// 点击我的
+		driver.findElement(By.id("com.qihoo.browser:id/zj")).click();
+		Thread.sleep(3000);
+		// 点击下载
+		driver.findElement(By.id("com.qihoo.browser:id/aek")).click();
+		try {
+			driver.tap(
+					1,
+					driver.findElement(By
+							.xpath("//android.widget.TextView[contains(@text,'JPG   4.04 KB')]")),
+					2500);
+			Thread.sleep(3000);
+			driver.findElement(
+					By.xpath("//android.widget.TextView[contains(@text,'删除任务')]"))
+					.click();
+			Thread.sleep(3000);
+			driver.findElement(By.id("com.qihoo.browser:id/pg")).click();
+			Thread.sleep(3000);
+			driver.findElement(By.id("com.qihoo.browser:id/oe")).click();
+			Thread.sleep(3000);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("没有下载完成");
+		} finally {
+			driver.pressKeyCode(4);
+			Thread.sleep(2000);
+			driver.pressKeyCode(4);
+			Thread.sleep(500);
+			driver.pressKeyCode(4);
+			Thread.sleep(5000);
+		}
+
+		// driver.launchApp();
+		// Thread.sleep(3000);
+	}
 
 	@BeforeClass
 	public void beforeClass() throws MalformedURLException {
