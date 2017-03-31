@@ -5,11 +5,12 @@
     <classes>
       <class name="com.qihoo.browser.test.yuxuguang.NewTest">
         <methods>
+          <include name="case4"/>
           <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="afterClass"/>
-          <include name="shortcutClick"/>
-          <include name="afterMethod"/>
+          <include name="case5"/>
+          <include name="case2"/>
+          <include name="case1"/>
+          <include name="case3"/>
         </methods>
       </class> <!-- com.qihoo.browser.test.yuxuguang.NewTest -->
     </classes>

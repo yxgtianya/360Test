@@ -1,137 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="643448" started-at="2017-03-30T12:30:50Z" finished-at="2017-03-30T12:41:34Z">
+  <suite name="Suite" duration-ms="67073" started-at="2017-03-31T12:18:31Z" finished-at="2017-03-31T12:19:38Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="643448" started-at="2017-03-30T12:30:50Z" finished-at="2017-03-30T12:41:34Z">
+    <test name="Test" duration-ms="67073" started-at="2017-03-31T12:18:31Z" finished-at="2017-03-31T12:19:38Z">
       <class name="com.qihoo.browser.test.yuxuguang.NewTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeClass" is-config="true" duration-ms="13417" started-at="2017-03-30T20:30:50Z" finished-at="2017-03-30T20:31:04Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@39ba5a14]" name="beforeClass" is-config="true" duration-ms="13859" started-at="2017-03-31T20:18:31Z" finished-at="2017-03-31T20:18:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:31:04Z" finished-at="2017-03-30T20:31:04Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@39ba5a14]" name="beforeMethod" is-config="true" duration-ms="240" started-at="2017-03-31T20:18:45Z" finished-at="2017-03-31T20:18:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="case1()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="case1" duration-ms="45289" started-at="2017-03-30T20:31:04Z" finished-at="2017-03-30T20:31:49Z">
+        <test-method status="PASS" signature="case1()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@39ba5a14]" name="case1" duration-ms="48711" started-at="2017-03-31T20:18:45Z" finished-at="2017-03-31T20:19:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case1 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:31:49Z" finished-at="2017-03-30T20:31:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2017-03-30T20:31:49Z" finished-at="2017-03-30T20:31:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="case1()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="case1" duration-ms="45334" started-at="2017-03-30T20:31:49Z" finished-at="2017-03-30T20:32:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case1 -->
-        <test-method status="PASS" signature="case1()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="case1" duration-ms="45283" started-at="2017-03-30T20:32:34Z" finished-at="2017-03-30T20:33:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case1 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:32:34Z" finished-at="2017-03-30T20:32:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:32:34Z" finished-at="2017-03-30T20:32:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-03-30T20:33:20Z" finished-at="2017-03-30T20:33:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:33:20Z" finished-at="2017-03-30T20:33:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="case2()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="case2" duration-ms="40085" started-at="2017-03-30T20:33:20Z" finished-at="2017-03-30T20:34:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case2 -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:34:00Z" finished-at="2017-03-30T20:34:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:34:00Z" finished-at="2017-03-30T20:34:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="case2()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="case2" duration-ms="41918" started-at="2017-03-30T20:34:00Z" finished-at="2017-03-30T20:34:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case2 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:34:42Z" finished-at="2017-03-30T20:34:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="case2()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="case2" duration-ms="39452" started-at="2017-03-30T20:34:42Z" finished-at="2017-03-30T20:35:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case2 -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:34:42Z" finished-at="2017-03-30T20:34:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:35:21Z" finished-at="2017-03-30T20:35:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="case3()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="case3" duration-ms="48393" started-at="2017-03-30T20:35:21Z" finished-at="2017-03-30T20:36:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case3 -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:35:21Z" finished-at="2017-03-30T20:35:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:36:10Z" finished-at="2017-03-30T20:36:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="case3()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="case3" duration-ms="42865" started-at="2017-03-30T20:36:10Z" finished-at="2017-03-30T20:36:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case3 -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:36:10Z" finished-at="2017-03-30T20:36:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-03-30T20:36:52Z" finished-at="2017-03-30T20:36:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:36:52Z" finished-at="2017-03-30T20:36:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="case4()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="case4" duration-ms="149486" started-at="2017-03-30T20:36:52Z" finished-at="2017-03-30T20:39:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case4 -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:39:22Z" finished-at="2017-03-30T20:39:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-30T20:39:22Z" finished-at="2017-03-30T20:39:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="case4()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="case4" duration-ms="127586" started-at="2017-03-30T20:39:22Z" finished-at="2017-03-30T20:41:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case4 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-03-30T20:41:30Z" finished-at="2017-03-30T20:41:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@3f3afe78]" name="afterClass" is-config="true" duration-ms="4317" started-at="2017-03-30T20:41:30Z" finished-at="2017-03-30T20:41:34Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.qihoo.browser.test.yuxuguang.NewTest@39ba5a14]" name="afterClass" is-config="true" duration-ms="4253" started-at="2017-03-31T20:19:34Z" finished-at="2017-03-31T20:19:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
