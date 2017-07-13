@@ -8,6 +8,7 @@
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
           <include name="case1"/>
+          <include name="afterClass"/>
         </methods>
       </class> <!-- com.qihoo.browser.test.yuxuguang.NewTest -->
     </classes>
