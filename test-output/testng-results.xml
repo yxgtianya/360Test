@@ -1,34 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="8" failed="0" total="8" passed="0">
+<testng-results skipped="6" failed="0" total="6" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="533" started-at="2017-07-13T12:33:54Z" finished-at="2017-07-13T12:33:54Z">
+  <suite name="Default suite" duration-ms="1523" started-at="2017-07-14T10:49:26Z" finished-at="2017-07-14T10:49:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="533" started-at="2017-07-13T12:33:54Z" finished-at="2017-07-13T12:33:54Z">
-      <class name="com.qihoo.browser.test.main.PerformanceTest">
-        <test-method status="FAIL" signature="beforeClass()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
+    <test name="Default test" duration-ms="1523" started-at="2017-07-14T10:49:26Z" finished-at="2017-07-14T10:49:27Z">
+      <class name="com.qihoo.browser.test.main.NewTest1">
+        <test-method status="FAIL" signature="beforeClass()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-07-14T18:49:26Z" finished-at="2017-07-14T18:49:26Z">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
-              <![CDATA[A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement 'get driverData'? (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 129 milliseconds
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'WIN-MPNKU54F1BB', ip: '10.19.3.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: io.appium.java_client.android.AndroidDriver]]>
+Driver info: driver.version: AndroidDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: A new session could not be created. Details: Problem getting session data for driver type AndroidDriver; does it implement 'get driverData'? (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 129 milliseconds
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'WIN-MPNKU54F1BB', ip: '10.19.3.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
-Driver info: io.appium.java_client.android.AndroidDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+Driver info: driver.version: AndroidDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
@@ -39,7 +31,8 @@ Driver info: io.appium.java_client.android.AndroidDriver
 	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:114)
 	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:132)
 	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:92)
-	at com.qihoo.browser.test.main.PerformanceTest.beforeClass(PerformanceTest.java:292)
+	at com.qihoo.browser.test.lib.AppiumBase.beforeClass(AppiumBase.java:40)
+	at com.qihoo.browser.test.main.NewTest1.beforeClass(NewTest1.java:231)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -64,113 +57,76 @@ Driver info: io.appium.java_client.android.AndroidDriver
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'WIN-MPNKU54F1BB', ip: '10.19.3.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:84)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 36 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)
+	... 37 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 50 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="case1()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="case1" duration-ms="1" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
+        <test-method status="SKIP" signature="case1()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="case1" duration-ms="1" started-at="2017-07-14T18:49:27Z" finished-at="2017-07-14T18:49:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case1 -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="case2()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="case2" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
+        <test-method status="SKIP" signature="case2()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="case2" duration-ms="1" started-at="2017-07-14T18:49:27Z" finished-at="2017-07-14T18:49:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case2 -->
-        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="case3()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="case3" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
+        <test-method status="SKIP" signature="case3()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="case3" duration-ms="1" started-at="2017-07-14T18:49:27Z" finished-at="2017-07-14T18:49:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case3 -->
-        <test-method status="SKIP" signature="case4()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="case4" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
+        <test-method status="SKIP" signature="case4()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="case4" duration-ms="0" started-at="2017-07-14T18:49:27Z" finished-at="2017-07-14T18:49:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case4 -->
-        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="case5()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="case5" duration-ms="1" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
+        <test-method status="SKIP" signature="case5()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="case5" duration-ms="0" started-at="2017-07-14T18:49:27Z" finished-at="2017-07-14T18:49:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case5 -->
-        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="case6()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="case6" duration-ms="1" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
+        <test-method status="SKIP" signature="case6()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="case6" duration-ms="1" started-at="2017-07-14T18:49:27Z" finished-at="2017-07-14T18:49:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case6 -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="case7()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="case7" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case7 -->
-        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="case8()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="case8" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- case8 -->
-        <test-method status="SKIP" signature="afterClass()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-07-14T18:49:27Z" finished-at="2017-07-14T18:49:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:com.qihoo.browser.test.main.PerformanceTest@57829d67]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-07-13T20:33:54Z" finished-at="2017-07-13T20:33:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.qihoo.browser.test.main.PerformanceTest -->
+      </class> <!-- com.qihoo.browser.test.main.NewTest1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

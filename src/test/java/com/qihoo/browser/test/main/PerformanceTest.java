@@ -38,18 +38,20 @@ public class PerformanceTest {
 	private static ArrayList<String> cpuInfo = new ArrayList<String>();
 	private static ArrayList<String> verboseInfo = new ArrayList<String>();
 	private static String pkgName = "com.qihoo.browser";
+	private static int count;
 
 	/*
 	 * 启动->home键->启动
 	 */
 	@Test(invocationCount = 1, threadPoolSize = 1)
 	public void case1() throws InterruptedException {
-		for (int i = 0; i <= 5; i++) {
+		for (int i = 1; i <= 5; i++) {
 			driver.launchApp();
 			getInfo();
 			driver.pressKeyCode(3);
 			getInfo();
 		}
+		System.out.println(count);
 	}
 
 	/*
@@ -71,6 +73,7 @@ public class PerformanceTest {
 			slideUp();
 			getInfo();
 		}
+		System.out.println(count);
 	}
 
 	/*
@@ -112,6 +115,7 @@ public class PerformanceTest {
 			// .click();
 			// getInfo();
 		}
+		System.out.println(count);
 	}
 
 	/*
@@ -137,6 +141,7 @@ public class PerformanceTest {
 			}
 		}
 		getInfo();
+		System.out.println(count);
 	}
 
 	/*
@@ -181,6 +186,7 @@ public class PerformanceTest {
 					"//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")
 					.clear();
 		}
+		System.out.println(count);
 	}
 
 	/*
@@ -201,7 +207,7 @@ public class PerformanceTest {
 					.click();
 			getInfo();
 		}
-
+		System.out.println(count);
 	}
 
 	/*
@@ -241,6 +247,7 @@ public class PerformanceTest {
 			Thread.sleep(1000);
 			getInfo();
 		}
+		System.out.println(count);
 	}
 
 	/*
@@ -270,6 +277,7 @@ public class PerformanceTest {
 			driver.pressKeyCode(4);
 			getInfo();
 		}
+		System.out.println(count);
 	}
 
 	@BeforeClass
@@ -337,6 +345,7 @@ public class PerformanceTest {
 	public void getInfo() {
 		getMem();
 		getCpuinfo();
+		count+=1;
 	}
 
 	// 获取内存方法
@@ -497,7 +506,7 @@ public class PerformanceTest {
 		}
 		try {
 			fw = new FileWriter(memFile);
-			fw.write("***********内存占用（MB)***********\r\n");
+			fw.write("TIME,PACKAGENAME,MEMORY(MB)");
 			for (String item : verboseInfo) {
 				fw.write(item + "\r\n");
 			}

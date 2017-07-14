@@ -11,11 +11,13 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.apache.bcel.generic.NEW;
+
 public class Performace {
 	public static void main(String args[]) throws IOException, InterruptedException{
 		Performace pe = new Performace();
 		//System.out.println(pe.fetchMemAndCpu());
-		pe.getCpuinfo();
+		pe.input("123");
 	}
 	
 	public String[] fetchMemAndCpu() throws IOException, InterruptedException{
@@ -40,6 +42,38 @@ public class Performace {
          }
 		return null;
          
+	}
+	
+	public void input(String s){
+		String id = null;
+		BufferedReader in = null;
+		try {
+			in = new BufferedReader(new InputStreamReader(
+					Runtime.getRuntime().exec("adb devices").getInputStream()));
+			String line = null;
+			while ((line = in.readLine()) != null) {
+				if (line.contains("device")) {
+					id = line.trim().split("device")[0].trim();
+				}
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			try {
+				in.close();
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+		}
+		System.out.println(id);
+		try {
+			Runtime.getRuntime().exec("adb -s "+id+"shell input text " + s);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	// 获取内存方法
@@ -110,8 +144,8 @@ public class Performace {
 	}
 	
 	
-	public double getTraffic(){
-		float totalTraffic = 0f;
+	public double[] getTraffic(){
+		double totalTraffic[] = new double[2];
 		int rx_bytes = 0;
 		int tx_bytes = 0;
 		try {
@@ -131,7 +165,8 @@ public class Performace {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		totalTraffic = (rx_bytes + tx_bytes) / 1024;
+		totalTraffic[0] = rx_bytes / 1024;
+		totalTraffic[1] = tx_bytes / 1024;
 		return totalTraffic;
 	}
 	

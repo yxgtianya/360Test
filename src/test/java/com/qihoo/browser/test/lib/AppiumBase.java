@@ -43,6 +43,7 @@ public class AppiumBase {
 		execWidth = driver.manage().window().getSize().width;
 		execHeight = driver.manage().window().getSize().height;
 		action = new Actions(driver);
+		//driver.closeApp();
   }
 
   @AfterClass

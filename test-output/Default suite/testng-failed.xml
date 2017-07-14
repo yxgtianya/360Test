@@ -3,19 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qihoo.browser.test.main.PerformanceTest">
+      <class name="com.qihoo.browser.test.main.NewTest1">
         <methods>
-          <include name="case1"/>
-          <include name="case2"/>
-          <include name="case3"/>
-          <include name="case4"/>
-          <include name="beforeClass"/>
-          <include name="case5"/>
           <include name="case6"/>
-          <include name="case7"/>
-          <include name="case8"/>
+          <include name="case5"/>
+          <include name="case2"/>
+          <include name="beforeClass"/>
+          <include name="case4"/>
+          <include name="case1"/>
+          <include name="case3"/>
         </methods>
-      </class> <!-- com.qihoo.browser.test.main.PerformanceTest -->
+      </class> <!-- com.qihoo.browser.test.main.NewTest1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
