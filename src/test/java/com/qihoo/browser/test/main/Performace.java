@@ -1,6 +1,7 @@
 package com.qihoo.browser.test.main;
 
 import java.awt.List;
+import java.awt.print.Printable;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -17,7 +18,7 @@ public class Performace {
 	public static void main(String args[]) throws IOException, InterruptedException{
 		Performace pe = new Performace();
 		//System.out.println(pe.fetchMemAndCpu());
-		pe.input("123");
+		pe.input("baidu.com");
 	}
 	
 	public String[] fetchMemAndCpu() throws IOException, InterruptedException{
@@ -67,8 +68,9 @@ public class Performace {
 			}
 		}
 		System.out.println(id);
+		System.out.println("adb -s "+id+" shell input text " + s);
 		try {
-			Runtime.getRuntime().exec("adb -s "+id+"shell input text " + s);
+			Runtime.getRuntime().exec("adb -s "+id+" shell input text " + s);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -146,8 +148,8 @@ public class Performace {
 	
 	public double[] getTraffic(){
 		double totalTraffic[] = new double[2];
-		int rx_bytes = 0;
-		int tx_bytes = 0;
+		double rx_bytes = 0;
+		double tx_bytes = 0;
 		try {
 			Runtime runtime = Runtime.getRuntime();
 			Process proc = runtime

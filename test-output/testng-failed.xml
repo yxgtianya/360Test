@@ -5,13 +5,9 @@
     <classes>
       <class name="com.qihoo.browser.test.main.NewTest1">
         <methods>
+          <include name="afterClass"/>
           <include name="case6"/>
-          <include name="case5"/>
-          <include name="case2"/>
           <include name="beforeClass"/>
-          <include name="case4"/>
-          <include name="case1"/>
-          <include name="case3"/>
         </methods>
       </class> <!-- com.qihoo.browser.test.main.NewTest1 -->
     </classes>

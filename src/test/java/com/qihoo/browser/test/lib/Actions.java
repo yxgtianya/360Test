@@ -18,6 +18,10 @@ public class Actions{
 	}
 	
 	
+	public void back(){
+		driver.pressKeyCode(4);
+	}
+	
 	
 	public void dial() throws InterruptedException{
 		System.out.println(driver.currentActivity());
