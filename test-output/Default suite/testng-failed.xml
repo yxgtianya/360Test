@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qihoo.browser.test.main.NewTest1">
+      <class name="com.qihoo.browser.test.main.TrafficCompare">
         <methods>
           <include name="afterClass"/>
-          <include name="case6"/>
           <include name="beforeClass"/>
+          <include name="case6"/>
         </methods>
-      </class> <!-- com.qihoo.browser.test.main.NewTest1 -->
+      </class> <!-- com.qihoo.browser.test.main.TrafficCompare -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

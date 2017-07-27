@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="946875" started-at="2017-07-17T09:15:57Z" finished-at="2017-07-17T09:31:44Z">
+  <suite name="Default suite" duration-ms="76918" started-at="2017-07-17T11:48:23Z" finished-at="2017-07-17T11:49:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="946875" started-at="2017-07-17T09:15:57Z" finished-at="2017-07-17T09:31:44Z">
-      <class name="com.qihoo.browser.test.main.NewTest1">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="beforeClass" is-config="true" duration-ms="17635" started-at="2017-07-17T17:15:57Z" finished-at="2017-07-17T17:16:15Z">
+    <test name="Default test" duration-ms="76918" started-at="2017-07-17T11:48:23Z" finished-at="2017-07-17T11:49:39Z">
+      <class name="com.qihoo.browser.test.main.TrafficCompare">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.qihoo.browser.test.main.TrafficCompare@30c7da1e]" name="beforeClass" is-config="true" duration-ms="17632" started-at="2017-07-17T19:48:23Z" finished-at="2017-07-17T19:48:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="case4()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="case4" duration-ms="312370" started-at="2017-07-17T17:16:15Z" finished-at="2017-07-17T17:21:27Z">
+        <test-method status="PASS" signature="case1()[pri:0, instance:com.qihoo.browser.test.main.TrafficCompare@30c7da1e]" name="case1" duration-ms="7156" started-at="2017-07-17T19:48:40Z" finished-at="2017-07-17T19:48:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case1 -->
+        <test-method status="PASS" signature="case2()[pri:0, instance:com.qihoo.browser.test.main.TrafficCompare@30c7da1e]" name="case2" duration-ms="6361" started-at="2017-07-17T19:48:47Z" finished-at="2017-07-17T19:48:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case2 -->
+        <test-method status="PASS" signature="case3()[pri:0, instance:com.qihoo.browser.test.main.TrafficCompare@30c7da1e]" name="case3" duration-ms="7624" started-at="2017-07-17T19:48:54Z" finished-at="2017-07-17T19:49:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case3 -->
+        <test-method status="PASS" signature="case4()[pri:0, instance:com.qihoo.browser.test.main.TrafficCompare@30c7da1e]" name="case4" duration-ms="16403" started-at="2017-07-17T19:49:01Z" finished-at="2017-07-17T19:49:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case4 -->
-        <test-method status="PASS" signature="case5()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="case5" duration-ms="305367" started-at="2017-07-17T17:21:27Z" finished-at="2017-07-17T17:26:32Z">
+        <test-method status="PASS" signature="case5()[pri:0, instance:com.qihoo.browser.test.main.TrafficCompare@30c7da1e]" name="case5" duration-ms="8831" started-at="2017-07-17T19:49:18Z" finished-at="2017-07-17T19:49:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case5 -->
-        <test-method status="PASS" signature="case6()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="case6" duration-ms="307552" started-at="2017-07-17T17:26:32Z" finished-at="2017-07-17T17:31:40Z">
+        <test-method status="PASS" signature="case6()[pri:0, instance:com.qihoo.browser.test.main.TrafficCompare@30c7da1e]" name="case6" duration-ms="9147" started-at="2017-07-17T19:49:27Z" finished-at="2017-07-17T19:49:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- case6 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.qihoo.browser.test.main.NewTest1@30c7da1e]" name="afterClass" is-config="true" duration-ms="3939" started-at="2017-07-17T17:31:40Z" finished-at="2017-07-17T17:31:44Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.qihoo.browser.test.main.TrafficCompare@30c7da1e]" name="afterClass" is-config="true" duration-ms="3750" started-at="2017-07-17T19:49:36Z" finished-at="2017-07-17T19:49:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.qihoo.browser.test.main.NewTest1 -->
+      </class> <!-- com.qihoo.browser.test.main.TrafficCompare -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -17,10 +17,10 @@ import org.testng.annotations.Test;
 
 import com.qihoo.browser.test.lib.AppiumBase;
 
-public class NewTest1 extends AppiumBase {
+public class TrafficCompare extends AppiumBase {
 	// 300000ms等待
 	private int waittime = 300000;
-	private ArrayList<String> trafficInfo = new ArrayList<String>();
+	private ArrayList<Double> trafficInfo = new ArrayList<Double>();
 
 	// 退到后台通用用例
 	public void caseInBg(String pkgName, String activity)
@@ -32,8 +32,8 @@ public class NewTest1 extends AppiumBase {
 		driver.pressKeyCode(3);
 		Thread.sleep(waittime);
 		double endTraffic[] = getTraffic(pkgName);
-		trafficInfo.add(pkgName + ",rx," + (endTraffic[0] - beginTraffic[0]));
-		trafficInfo.add(pkgName + ",tx," + (endTraffic[1] - beginTraffic[1]));
+		trafficInfo.add(endTraffic[0] - beginTraffic[0]);
+		trafficInfo.add(endTraffic[1] - beginTraffic[1]);
 		System.out
 				.println(pkgName + " rx:" + (endTraffic[0] - beginTraffic[0]));
 		System.out
@@ -41,19 +41,19 @@ public class NewTest1 extends AppiumBase {
 	}
 
 	// 360退到后台
-//	@Test(invocationCount = 1, threadPoolSize = 1)
+	@Test(invocationCount = 1, threadPoolSize = 1)
 	public void case1() throws InterruptedException {
 		caseInBg("com.qihoo.browser", "com.qihoo.browser.BrowserActivity");
 	}
 
 	// qq退到后台
-//	@Test(invocationCount = 1, threadPoolSize = 1)
+	@Test(invocationCount = 1, threadPoolSize = 1)
 	public void case2() throws InterruptedException {
 		caseInBg("com.tencent.mtt", "com.tencent.mtt.MainActivity");
 	}
 
 	// UC退到后台
-//	@Test(invocationCount = 1, threadPoolSize = 1)
+	@Test(invocationCount = 1, threadPoolSize = 1)
 	public void case3() throws InterruptedException {
 		caseInBg("com.UCMobile", "com.uc.browser.InnerUCMobile");
 	}
@@ -73,14 +73,13 @@ public class NewTest1 extends AppiumBase {
 				.click();
 		Thread.sleep(waittime);
 		double endTraffic[] = getTraffic("com.qihoo.browser");
-		trafficInfo.add("com.qihoo.browser" + ",rx,"
-				+ (endTraffic[0] - beginTraffic[0]));
-		trafficInfo.add("com.qihoo.browser" + ",tx,"
-				+ (endTraffic[1] - beginTraffic[1]));
+		trafficInfo.add(endTraffic[0] - beginTraffic[0]);
+		trafficInfo.add(endTraffic[1] - beginTraffic[1]);
 		System.out.println("com.qihoo.browser:"
 				+ (endTraffic[0] - beginTraffic[0]));
 		System.out.println("com.qihoo.browser:"
 				+ (endTraffic[1] - beginTraffic[1]));
+		action.back();
 	}
 
 	// qq open baidu.com
@@ -96,15 +95,13 @@ public class NewTest1 extends AppiumBase {
 				.click();
 		Thread.sleep(waittime);
 		double endTraffic[] = getTraffic("com.tencent.mtt");
-		trafficInfo.add("com.tencent.mtt" + ",rx,"
-				+ (endTraffic[0] - beginTraffic[0]));
-		trafficInfo.add("com.tencent.mtt" + ",tx,"
-				+ (endTraffic[1] - beginTraffic[1]));
+		trafficInfo.add(endTraffic[0] - beginTraffic[0]);
+		trafficInfo.add(endTraffic[1] - beginTraffic[1]);
 		System.out.println("com.tencent.mtt:"
 				+ (endTraffic[0] - beginTraffic[0]));
 		System.out.println("com.tencent.mtt:"
 				+ (endTraffic[1] - beginTraffic[1]));
-
+		action.back();
 	}
 
 	// uc open baidu.com
@@ -122,12 +119,22 @@ public class NewTest1 extends AppiumBase {
 				.click();
 		Thread.sleep(waittime);
 		double endTraffic[] = getTraffic("com.UCMobile");
-		trafficInfo.add("com.UCMobile" + ",rx,"
-				+ (endTraffic[0] - beginTraffic[0]));
-		trafficInfo.add("com.UCMobile" + ",tx,"
-				+ (endTraffic[1] - beginTraffic[1]));
+		trafficInfo.add(endTraffic[0] - beginTraffic[0]);
+		trafficInfo.add(endTraffic[1] - beginTraffic[1]);
 		System.out.println("com.UCMobile:" + (endTraffic[0] - beginTraffic[0]));
 		System.out.println("com.UCMobile:" + (endTraffic[1] - beginTraffic[1]));
+		action.back();
+	}
+
+	//流程控制
+//	@Test(invocationCount = 1, threadPoolSize = 1)
+	public void case7() throws InterruptedException {
+		case1();
+		case2();
+		case3();
+		case4();
+		case5();
+		case6();
 	}
 
 	// 解决sendkeys有时bug无法输入的问题 （非中文输入）
@@ -154,7 +161,8 @@ public class NewTest1 extends AppiumBase {
 			}
 		}
 		try {
-			Runtime.getRuntime().exec("adb -s " + id + " shell input text " + s);
+			Runtime.getRuntime()
+					.exec("adb -s " + id + " shell input text " + s);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -272,9 +280,14 @@ public class NewTest1 extends AppiumBase {
 		}
 		try {
 			fw = new FileWriter(tfcFile);
-			fw.write("PACKAGENAME,TRFFIC(KB)\r\n");
-			for (String item : trafficInfo) {
-				fw.write(item + "\r\n");
+			fw.write("background-360r-x,background-360-tx,background-qq-rx,background-qq-tx,background-uc-rx,background-uc-tx,baidu-360-rx,baidu-360-tx,baidu-qq-rx,baidu-qq-tx,baidu-uc-rx,baidu-uc-tx\r\n");
+			for (int i = 0; i < trafficInfo.size(); i++) {
+				if ((i+1) % 12 == 0) {
+					fw.write(trafficInfo.get(i) + "\r\n");
+				} else {
+					fw.write(trafficInfo.get(i) + ",");
+				}
+
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

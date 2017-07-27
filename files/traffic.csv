@@ -1,7 +1,2 @@
-PACKAGENAME,TRFFIC(KB)
-com.qihoo.browser,rx,372.0537109375
-com.qihoo.browser,tx,96.4736328125
-com.tencent.mtt,rx,425.173828125
-com.tencent.mtt,tx,69.51953125
-com.UCMobile,rx,397.36328125
-com.UCMobile,tx,79.552734375
+background-360r-x,background-360-tx,background-qq-rx,background-qq-tx,background-uc-rx,background-uc-tx,baidu-360-rx,baidu-360-tx,baidu-qq-rx,baidu-qq-tx,baidu-uc-rx,baidu-uc-tx
+5.3193359375,9.2900390625,8.6923828125,13.01953125,66.205078125,25.7568359375,365.4638671875,70.5380859375,524.9384765625,63.416015625,197.2451171875,54.1396484375

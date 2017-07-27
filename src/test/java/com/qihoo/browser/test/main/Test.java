@@ -14,9 +14,9 @@ import java.util.Set;
 
 import org.apache.bcel.generic.NEW;
 
-public class Performace {
+public class Test {
 	public static void main(String args[]) throws IOException, InterruptedException{
-		Performace pe = new Performace();
+		Test pe = new Test();
 		//System.out.println(pe.fetchMemAndCpu());
 		pe.input("baidu.com");
 	}
