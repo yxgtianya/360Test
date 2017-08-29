@@ -3,6 +3,7 @@ package com.qihoo.browser.test.main;
 import java.awt.List;
 import java.awt.print.Printable;
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,12 +14,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.bcel.generic.NEW;
+import org.apache.log4j.Logger;
 
 public class Test {
 	public static void main(String args[]) throws IOException, InterruptedException{
 		Test pe = new Test();
 		//System.out.println(pe.fetchMemAndCpu());
-		pe.input("baidu.com");
+		Logger logger = Logger.getLogger(Test.class);
+		pe.testDate();
 	}
 	
 	public String[] fetchMemAndCpu() throws IOException, InterruptedException{
@@ -229,6 +232,21 @@ public class Test {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
+	}
+	
+	public void testDate(){
+		try{
+			Process process = Runtime.getRuntime().exec("adb shell su");
+			String datetimeString = "20131023.112800";
+			DataOutputStream os = new DataOutputStream(process.getOutputStream());
+			os.writeBytes("setprop persist.sys.timezone GMT\n");
+			os.writeBytes("/system/bin/date -s " + datetimeString + "\n");
+			os.writeBytes("clock -w\n");
+			os.writeBytes("exit\n");
+			os.flush();			
+		}catch(IOException E){
+			E.printStackTrace();
 		}
 	}
 }

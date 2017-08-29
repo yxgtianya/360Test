@@ -7,15 +7,20 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.*;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import com.qihoo.browser.test.main.AdTest;
+
 
 public class AppiumBase {
 
 	public static AndroidDriver<WebElement> driver;
+	//public Logger logger = Logger.getLogger(AppiumBase.class);
 	//nexus6尺寸
 	protected static int caseWidth = 1440;
 	protected static int caseHeight = 2392;
@@ -31,7 +36,7 @@ public class AppiumBase {
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("autoLaunch", false);
 		capabilities.setCapability("deviceName", "AppiumTestDevice");
-		capabilities.setCapability("platformVersion", "6.0.1");
+		capabilities.setCapability("platformVersion", "7.0");
 		capabilities.setCapability("appPackage", "com.qihoo.browser");
 		capabilities.setCapability("appActivity", ".activity.SplashActivity");
 		capabilities.setCapability("unicodeKeyboard", true);
